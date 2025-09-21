@@ -2,7 +2,7 @@
 
 import { DesktopIcon } from "./desktop-icon"
 import { Taskbar } from "./taskbar"
-import { ThreeWallpaper } from "./three-wallpaper"
+//import { ThreeWallpaper } from "./three-wallpaper"
 
 interface DesktopProps {
   onOpenWindow: (windowId: string) => void
@@ -24,7 +24,7 @@ export function Desktop({ onOpenWindow, onToggleStartMenu }: DesktopProps) {
 
   return (
     <>
-      <ThreeWallpaper />
+      {/* <ThreeWallpaper /> */}
 
       {/* Desktop Icons */}
       {desktopIcons.map((icon) => (
