@@ -1,0 +1,30 @@
+name: Deploy Next.js App
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies (force)
+        run: npm i --force
+
+      - name: Build Next.js app
+        run: npm run build
+
+      # Add your deployment step here (e.g., Vercel, FTP, etc.)
+      # Example for Vercel CLI deployment:
+      # - name: Deploy to Vercel
+      #   run: npx vercel --prod --token=${{ secrets.VERCEL_TOKEN }}
