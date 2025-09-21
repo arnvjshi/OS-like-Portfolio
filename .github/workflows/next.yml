@@ -19,7 +19,8 @@ jobs:
           node-version: '20'
 
       - name: Install dependencies (force)
-        run: npm i --force
+        run: npm install --legacy-peer-deps
+
 
       - name: Build Next.js app
         run: npm run build
