@@ -37,7 +37,7 @@ EXPERIENCE
     const blob = new Blob([resumeContent], { type: "text/plain" })
     const url = URL.createObjectURL(blob)
     const a = document.createElement("a")
-    a.href = url
+    a.href = "https://raw.githubusercontent.com/arnvjshi/arnvjshi/main/Resume.pdf"
     a.download = "Arnav_Joshi_Resume.txt"
     document.body.appendChild(a)
     a.click()
@@ -68,6 +68,7 @@ EXPERIENCE
         {/* Download Button */}
         <div className="text-center mb-8">
           <button
+            href="https://raw.githubusercontent.com/arnvjshi/arnvjshi/main/Resume.pdf"
             onClick={downloadResume}
             className="px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 rounded-lg font-semibold transition-all duration-300 hover:scale-105"
           >
